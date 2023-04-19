@@ -1,10 +1,18 @@
 const post = {
     id: "",
-    creator: " ",
-    comments: " ",
-    name: "",
-    imageUr1: "",
-    summary: " "
+    name: " ",
+    subject: " ",
+    grade: ""
+}
+class Post {
+    constructor() {
+
+    }
 }
 
-module.exports = post
+
+
+
+
+
+module.exports ={ post}

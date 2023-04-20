@@ -42,6 +42,22 @@ app.post('/Students', (req,res) => {
                   }
                 });
               });
+// getting student by id
+app.get('/Students/:id', (req,res)  => {
+    const id = req.params.id;
+    // Retrieve message from database
+    const sql = `SELECT * FROM Students WHERE id = ?`;
+    const values = [id];
+    dbConnection.query(sql,values,(error,results)  =>{
+      if(error){
+        console.log(error);
+        res.status(500).send('error retrieving message');
+      }else{
+        res.send(results);
+      }
+      });
+    });
+  
 
 
 app.listen(3000,function(){
